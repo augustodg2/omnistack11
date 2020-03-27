@@ -1,0 +1,83 @@
+.profile-container {
+  width: 100%;
+  max-width: 1180px;
+  padding: 0 2.75rem;
+  margin: 2.5rem auto;
+}
+
+.profile-container header {
+  display: flex;
+  align-items: center;
+}
+
+.profile-container header span {
+  font-size: 1.5rem;
+  margin-left: 1.75rem;
+}
+
+.profile-container header img {
+  height: 4.5rem;
+}
+
+.profile-container header a {
+  width: 18.5rem;
+  margin-left: auto;
+  margin-top: 0;
+}
+
+.profile-container header button {
+  height: 4.25rem;
+  width: 4.25rem;
+  border-radius: .5rem;
+  border: 1px solid #dcdce6;
+  background: transparent;
+  margin-left: 1rem;
+  transition: border-color 0.2s;
+}
+
+.profile-container header button:hover {
+  border-color: #aaa;
+}
+
+.profile-container h1 {
+  margin-top: 5.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.profile-container ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.75rem;
+}
+
+.profile-container ul li {
+  background: #fff;
+  padding: 1.75rem;
+  border-radius: .5rem;
+  position: relative;
+}
+
+.profile-container ul li button {
+  position: absolute;
+  top: 1.75rem;
+  right: 1.75rem;
+}
+
+.profile-container ul li button:hover svg {
+  filter: brightness(80%);
+}
+
+.profile-container ul li strong {
+  display: block;
+  margin-bottom: 1rem;
+  color: #41414d
+}
+
+.profile-container ul li p + strong {
+  margin-top: 2rem;
+}
+.profile-container ul li p {
+  color: #737380;
+  line-height: 1.5rem;
+  font-size: 1.15rem;
+}

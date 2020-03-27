@@ -51,14 +51,16 @@ module.exports = {
       .select('ong_id')
       .first()
 
-    console.log(incident)
+    if (!incident) {
+      return response.status(412).json({ error: 'Incident not exists.' })
+    }
 
     if (ong_id !== incident.ong_id) {
       return response.status(401).json({ error: 'Operation not permited.' })
     }
 
-    await db_connection('incidents').where('id', id).delete()
-
+    const query = await db_connection('incidents').where('id', id).del()
+    
     return response.status(204).send()
   },
 }
