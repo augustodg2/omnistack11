@@ -23,9 +23,6 @@ module.exports = {
 
     return response.json(incidents)
   },
-  get: async (request, response) => {
-
-  },
   create: async (request, response) => {
     const { title, description, value } = request.body
     const ong_id = request.headers.authorization
@@ -39,9 +36,6 @@ module.exports = {
 
     return response.json({ id })
   },
-  update: async (request, response) => {
-
-  },
   delete: async (request, response) => {
     const { id } = request.params
     const ong_id = request.headers.authorization
@@ -52,7 +46,7 @@ module.exports = {
       .first()
 
     if (!incident) {
-      return response.status(412).json({ error: 'Incident not exists.' })
+      return response.status(400).json({ error: 'Incident not exists.' })
     }
 
     if (ong_id !== incident.ong_id) {
